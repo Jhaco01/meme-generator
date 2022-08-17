@@ -1,0 +1,31 @@
+header{
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.left-side{
+    display: flex;
+    align-items: center;
+}
+
+.left-side img{
+    width: 7%;
+    height: 70%;
+    padding-right: 2%;
+}
+
+.right-side{
+    margin-right: 1%;
+}
+
+.right-side p{
+    font-size: 1.1vw;
+}
