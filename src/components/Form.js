@@ -6,10 +6,10 @@ export const Form = () => {
         <form>
             <div className="form">
                 <div className="text-inputs">
-                    <input type={'text'} ></input>
-                    <input type={'text'} ></input>
+                    <input type={'text'} placeholder='Top Phrase' ></input>
+                    <input type={'text'} placeholder='Bottom Phrase' ></input>
                 </div>
-                <input type={'submit'} id='button' value='Get a new meme image' ></input>
+                <button id='button' >Get a new meme image</button>
             </div>
         </form>
     )

@@ -22,6 +22,10 @@ header{
     padding-right: 2%;
 }
 
+.left-side h3{
+    font-size: 1.5vw;
+}
+
 .right-side{
     margin-right: 1%;
 }
