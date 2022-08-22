@@ -4,13 +4,20 @@ import "../style/MemeSite.css"
 
 export const MemeSite = () => {
 
-    const [url, setUrl] = useState('');
+    const [allMemeImages, setAllMemeImages] = useState(data);
+
+    const [meme , setMeme] = useState(
+        {
+            topText : '',
+            bottomText : '',
+            url : '',
+        }
+    );
 
     const getMemeImage = () => {
-
-        const items = data.data.memes;        
-        const item = items[Math.floor(Math.random()*items.length)];
-        setUrl(item.url);
+        
+        const item = allMemeImages.data.memes[Math.floor(Math.random()*allMemeImages.data.memes.length)];
+        setMeme(prevState => ({...prevState, url: item.url}));
 
     }
     
@@ -24,7 +31,7 @@ export const MemeSite = () => {
                     </div>
                     <button id='button' onClick={ getMemeImage } > Get a new meme image </button>                
                 </div>                
-                <img className="img" src={ url } />                
+                <img className="img" src={ meme.url } />                
             </div>
         </section>
     )
