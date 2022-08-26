@@ -56,5 +56,29 @@
     height: 50vh;
     object-fit: cover;
     object-position: center;
-    margin-top: 3%;
+    margin-top: 3%;    
+}
+
+.meme{
+    position: relative;
+}
+
+.meme h2 {
+    position: absolute;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bolder;
+    font-size: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#top {
+    top: 3%;    
+}
+
+#bottom{
+    bottom: 3%;    
 }
