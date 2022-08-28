@@ -1,10 +1,17 @@
-import React, { useState } from "react";
-import data from "./MemeData"
+import React, { useEffect, useState } from "react";
 import "../style/MemeSite.css"
 
-export const MemeSite = () => {
+export const MemeSite = () => {    
 
-    const [allMemeImages, setAllMemeImages] = useState(data);
+    console.log('component rendered');
+
+    const [allMeme, setAllMeme] = useState([]);
+
+    useEffect( () => {
+        fetch('https://api.imgflip.com/get_memes')
+                    .then((resp)=>resp.json())
+                    .then((data) => setAllMeme(data.data.memes))
+    } ,[]);
 
     const [meme , setMeme] = useState(
         {
@@ -16,7 +23,7 @@ export const MemeSite = () => {
 
     const getMemeImage = () => {
         
-        const item = allMemeImages.data.memes[Math.floor(Math.random()*allMemeImages.data.memes.length)];
+        const item = allMeme[Math.floor(Math.random()*allMeme.length)];
         setMeme(prevState => ({...prevState, url: item.url}));
 
     }
