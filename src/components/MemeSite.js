@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../style/MemeSite.css"
 
-export const MemeSite = () => {    
-
-    console.log('component rendered');
+export const MemeSite = () => {        
 
     const [allMeme, setAllMeme] = useState([]);
 
     useEffect( () => {
-        fetch('https://api.imgflip.com/get_memes')
-                    .then((resp)=>resp.json())
-                    .then((data) => setAllMeme(data.data.memes))
+        const getMeme = async () => {
+            const resp = await fetch('https://api.imgflip.com/get_memes');
+            const data = await resp.json();
+            setAllMeme(data.data.memes)
+        }
+        getMeme();
     } ,[]);
 
     const [meme , setMeme] = useState(
