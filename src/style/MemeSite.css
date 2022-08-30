@@ -105,4 +105,10 @@
     .meme h2 {
         font-size: 7vw;
     }
+
+    .img{
+        width: 100vw;
+        height: auto;
+    }
+
 }
