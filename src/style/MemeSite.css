@@ -53,7 +53,7 @@
 
 .img{
     width: auto;
-    height: 50vh;
+    height: 70vh;
     object-fit: cover;
     object-position: center;
     margin-top: 3%;    
@@ -67,12 +67,14 @@
     position: absolute;
     font-family: 'Luckiest Guy', cursive;
     font-weight: bolder;
-    font-size: 3vw;
+    font-size: 4.2vw;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     text-align: center;
+    color: white;
+    -webkit-text-stroke: 0.3vw black;
 }
 
 #top {
@@ -81,4 +83,26 @@
 
 #bottom{
     bottom: 3%;    
+}
+
+@media screen and (min-width: 400px) and (max-width: 950px) {
+    .text-inputs input, #button{
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .text-inputs{
+        flex-flow: column;        
+    }
+    .text-inputs input{
+        width: 100%;
+        font-size: 4.2vw;
+    }    
+    #button{
+        font-size: 4vw;
+    }
+    .meme h2 {
+        font-size: 7vw;
+    }
 }

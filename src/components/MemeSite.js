@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../style/MemeSite.css"
+import "../style/MemeSite.css";
 
 export const MemeSite = () => {        
 

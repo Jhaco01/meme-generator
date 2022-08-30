@@ -33,3 +33,24 @@ header{
 .right-side p{
     font-size: 1.1vw;
 }
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    .left-side h3{
+        font-size: 2.5vw;
+    }
+        
+    .right-side p{
+        font-size: 2vw;
+    }   
+}
+
+@media screen and (max-width: 400px) {
+    .left-side h3{
+        font-size: 4vw;
+    }
+        
+    
+    .right-side p{
+        font-size: 3.5vw;
+    }   
+}
